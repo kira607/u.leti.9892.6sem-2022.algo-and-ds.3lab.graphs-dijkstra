@@ -1,0 +1,11 @@
+digraph {
+    A -> B [label="12"]
+    A -> C [label="42"]
+    A -> D [label="-3"]
+    subgraph {
+        a -> b
+        b -> c
+        c -> d
+        d -> a
+    }
+}

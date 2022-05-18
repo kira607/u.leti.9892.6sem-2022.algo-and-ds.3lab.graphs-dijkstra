@@ -1,0 +1,5 @@
+a;b;1;N/A
+b;c;1;N/A
+c;d;1;N/A
+d;e;10;N/A
+a;e;5;N/A
