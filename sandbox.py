@@ -81,7 +81,7 @@ def gen_matrix(vertices):
     for row in range(len(vertices)):
         matrix_row = []
         for col in range(len(vertices)):
-            new_value = gen_value(15) if row != col else 0
+            new_value = gen_value(10) if row != col else 0
             matrix_row.append(new_value)
         matrix.append(matrix_row)
     return matrix
@@ -111,7 +111,19 @@ def main():
         save_file = 'graph.txt'
     
     v = _vertices
+    v = [
+        'Невельск',
+        'Черняховск',
+        'Хилок',
+        'Навашино',
+        'Фурманов',
+        'Люберцы',
+        'Михайловка',
+        'Выкса',
+        'Пустошка',
+    ]
     matrix = randomize_matrix(_matrix)
+    matrix = gen_matrix(v)
     data = make_graph_data(matrix, v)
     write_graph_data(data, save_file)
     print(f'Generated graph with {len(v)} vertices and saved it to {save_file}')
